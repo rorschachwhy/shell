@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+echo y | deployer --restart -p deployer
+echo y | deployer --restart -p marketing
+echo y | deployer --restart -p platform
+echo y | deployer --restart -p rop

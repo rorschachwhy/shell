@@ -1,0 +1,14 @@
+
+#!/bin/sh
+
+echo y | deployer -d -p web  -b 51 -t
+echo y | deployer -d -p thirdparty  -b 2 -t
+echo y | deployer -d -p marketing  -b 127 -t
+echo y | deployer -d -p statistics  -b 36 -t
+echo y | deployer -d -p content  -b 41 -t
+echo y | deployer -d -p commerce  -b 26 -t
+echo y | deployer -d -p cas  -b 42 -t
+echo y | deployer -d -p bpm  -b 107 -t
+echo y | deployer -d -p rop  -b 9 -t
+echo y | deployer -d -p platform  -b 1548 -t
+echo y | deployer -d -p delivery  -b 23 -t

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo y | deployer -d -p marketing  -b 1 -o 
+echo y | deployer -d -p rop  -b 1 -o
+echo y | deployer -d -p platform  -b 1 -o 

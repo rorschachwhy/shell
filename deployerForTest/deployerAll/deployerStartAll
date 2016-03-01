@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo y | deployer --start -p web
+echo y | deployer --start -p deployer
+echo y | deployer --start -p thirdparty
+echo y | deployer --start -p platform
+echo y | deployer --start -p marketing
+echo y | deployer --start -p statistics
+echo y | deployer --start -p delivery
+echo y | deployer --start -p content
+echo y | deployer --start -p commerce
+echo y | deployer --start -p cas
+echo y | deployer --start -p bpm
+echo y | deployer --start -p rop

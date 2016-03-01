@@ -1,0 +1,8 @@
+
+#!/bin/sh
+
+echo y | deployer -d -p marketing  -b 127 -t
+echo y | deployer -d -p rop  -b 17 -t
+echo y | deployer -d -p platform  -b 1548 -t
+
+

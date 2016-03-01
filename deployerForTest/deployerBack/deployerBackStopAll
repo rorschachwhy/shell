@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo y | deployer --stop -p web
+echo y | deployer --stop -p deployer
+echo y | deployer --stop -p thirdparty
+echo y | deployer --stop -p statistics
+echo y | deployer --stop -p delivery
+echo y | deployer --stop -p content
+echo y | deployer --stop -p commerce
+echo y | deployer --stop -p cas
+echo y | deployer --stop -p bpm
+echo y | deployer --stop -p rop

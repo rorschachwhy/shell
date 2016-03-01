@@ -1,0 +1,27 @@
+#!/bin/sh
+
+DB_USER="root"
+DB_PASS="p@swrd123"
+HOST="192.168.1.157"
+DATE=`date +_%Y_%m_%d_%H_%M_%S`
+date=`date +%m-%d`
+
+if [ $# -eq 0 ];then
+echo "no DB arguments"
+else
+{
+if [ ! -e $date ];then
+  mkdir $date
+fi
+
+cd $date
+
+for db in $@ ; do
+  if [ $db == "i360r_delivery" ];then
+    /usr/bin/mysqldump -a -u$DB_USER -p$DB_PASS -h $HOST $db > $db$DATE.sql
+  else
+    /usr/bin/mysqldump -a -u$DB_USER -p$DB_PASS  $db > $db$DATE.sql
+  fi
+done
+}
+fi

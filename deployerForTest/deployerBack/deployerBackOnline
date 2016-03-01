@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo y | deployer -d -p web  -b 1 -o  
+echo y | deployer -d -p thirdparty  -b 1 -o  
+echo y | deployer -d -p statistics  -b 1 -o 
+echo y | deployer -d -p content  -b 1 -o 
+echo y | deployer -d -p commerce  -b 1 -o 
+echo y | deployer -d -p cas  -b 1 -o 
+echo y | deployer -d -p bpm  -b 1 -o 
+echo y | deployer -d -p rop  -b 1 -o
+echo y | deployer -d -p delivery  -b 1 -o 

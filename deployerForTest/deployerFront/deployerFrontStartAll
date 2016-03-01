@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+echo y | deployer --start -p deployer
+echo y | deployer --start -p platform
+echo y | deployer --start -p marketing
+echo y | deployer --restart -p rop
+
+
+
+

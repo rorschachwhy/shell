@@ -1,0 +1,23 @@
+#!/bin/sh
+
+DB_USER="root"
+DB_PASS="p@swrd123"
+#HOST="58.68.224.158"
+DATE=`date +_%Y_%m_%d_%H_%M_%S`
+date=`date +%m-%d`
+
+if [ $# -eq 0 ];then
+echo "no DB arguments"
+else
+{
+if [ ! -e $date ];then
+  mkdir $date
+fi
+
+cd $date
+
+for db in $@ ; do
+    /usr/bin/mysqldump -a -u$DB_USER -p$DB_PASS  $db > $db$DATE.sql
+done
+}
+fi

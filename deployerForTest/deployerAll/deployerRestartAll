@@ -1,0 +1,13 @@
+#!/bin/sh
+echo y | deployer --restart -p web
+echo y | deployer --restart -p thirdparty
+echo y | deployer --restart -p deployer
+echo y | deployer --restart -p bpm
+echo y | deployer --restart -p cas
+echo y | deployer --restart -p commerce
+echo y | deployer --restart -p content
+echo y | deployer --restart -p marketing
+echo y | deployer --restart -p statistics
+echo y | deployer --restart -p platform
+echo y | deployer --restart -p delivery
+echo y | deployer --restart -p rop
