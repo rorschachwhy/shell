@@ -30,7 +30,8 @@ HOSTNAME11=(
 "t611=58.68.233.94"
 )
 
-
+user="shbj"
+password="shbj123"
 #echo shbj123  | ssh shbj@58.68.148.61 
 
 #sshpass -p shbj123 ssh shbj@58.68.148.6
@@ -100,16 +101,18 @@ if [ "$a" = "yes" ];then
 	echo OK
 fi
 
+#参数：1 ip; 2 项目
 function deploy()
 {
-	spawn ssh shbj@58.68.148.52
+	spawn ssh $user@$1
 	expect {
 		"*yes/no" {send "yes\r"; exp_continue}
 		"*password:" { send "shbj123\r" }
 		}
 	expect "$*"
-	send "pwd\r"
-	#send "exit\r"
+	send "echo y | deployer -d -p $2 -b $3 -t &\r"
+	send "exit\r"
+	expect eof
 
 }
 
