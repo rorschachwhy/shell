@@ -8,7 +8,7 @@ ip="58.68.148.52"
 proj="bpm"
 num="612"
 function deploy(){
-/bin/expect <<-EOF
+/bin/expect <<EOF
 spawn ssh $user@$1
 expect {
 "*yes/no" {send "yes\r"; exp_continue}

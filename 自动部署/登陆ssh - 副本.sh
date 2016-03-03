@@ -101,20 +101,27 @@ if [ "$a" = "yes" ];then
 	echo OK
 fi
 
-#参数：1 ip; 2 项目
-function deploy()
-{
-	spawn ssh $user@$1
-	expect {
-		"*yes/no" {send "yes\r"; exp_continue}
-		"*password:" { send "shbj123\r" }
-		}
-	expect "$*"
-	send "echo y | deployer -d -p $2 -b $3 -t &\r"
-	send "exit\r"
-	expect eof
 
+ip="58.68.148.52"
+proj="delivery"
+num="359"
+#参数：1 ip; 2 项目;3 build号
+function deploy(){
+/bin/expect <<EOF
+set timeout 90
+spawn ssh $user@$1
+expect {  
+"*yes/no" { send "yes\r"; exp_continue}  
+"*password:" { send "$password\r" }  
+} 
+#expect "~]$*"  #识别太慢，why？
+send "echo y | deployer -d -p $2 -b $3 -t \r"
+#interact
+send "exit\r"
+expect eof
+EOF
 }
+deploy "$ip" "$proj" "$num"
 
 #for  ((i=0;i<($len/2);i++))
 #	do

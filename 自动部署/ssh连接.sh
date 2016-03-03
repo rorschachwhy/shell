@@ -5,4 +5,6 @@
      "*yes/no" { send "yes\r"; exp_continue}  
      "*password:" { send "shbj123\r" }  
      } 
+	 expect "~]$*"
+	send "pwd\r"
      interact
