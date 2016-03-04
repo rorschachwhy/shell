@@ -9,7 +9,7 @@ num="359"
 
 function deploy(){
 /bin/expect <<EOF
-set timeout 90
+set timeout -1
 spawn ssh $user@$1
 expect {  
 "*yes/no" { send "yes\r"; exp_continue}  
