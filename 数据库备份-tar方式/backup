@@ -1,0 +1,14 @@
+#!/bin/sh
+
+DATE=`date +_%Y_%m_%d_%H_%M_%S`
+PATH="/home"
+
+service mysqld stop
+cd $PATH
+
+if [  ];then
+
+fi
+
+tar cf mysql$DATE.tar mysql
+service mysqld start
