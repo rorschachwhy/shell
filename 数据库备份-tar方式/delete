@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PATH="/home"
+
+service mysqld stop
+cd $PATH
+rm -rf mysql
+tar xf mysql.tar
+
+service mysqld start
