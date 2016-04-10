@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#tar方式备份数据库
+
+DATE=`date +_%Y%m%d%H%M%S`
+
+#数据库文件目录
+path="/home/"
+
+service mysqld stop
+
+cd $path
+
+tar cf mysql$DATE.tar mysql
+
+service mysqld start

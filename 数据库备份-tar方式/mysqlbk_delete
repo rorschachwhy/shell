@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ $# != 1 ] ; then
+        echo "Usage: mysqlbk_delete mysql_2015_06_01.tar"
+        exit 1;
+fi
+
+read -p "Are you sure to delete $1? [Y/n] " response
+
+case $response in [Y])
+
+        if [[ "$1" =~ ".tar" ]];then
+                path="/home/"
+                cd $path
+                rm -f $1
+
+                echo "$1 has been deleted"
+        else
+                echo "$1 is not tar, just exit!"
+        fi
+    ;;
+    *)
+    echo Canceled
+    ;;
+esac
+
