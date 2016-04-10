@@ -1,0 +1,3 @@
+1、backup.sh：无需参数，备份mysql，生成文件名形如mysql_2016_04_10_13_09_20.tar的文件
+2、recover.sh：需要参数（恢复用的tar文件），首先判断tar文件是否存在，然后使用输入的tar文件来恢复
+3、delete.sh：需要参数（要删除的tar文件），只能删除tar文件
