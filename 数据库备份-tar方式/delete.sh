@@ -5,9 +5,9 @@
 #数据库文件目录
 path="/home/"
 
-if [[ "$1" =~ "tar" ]];then
+if [[ "$1" =~ ".tar" ]];then
 	cd $path
-	rm -rf $1
+	rm $1
 else 
 	echo "not tar, should not delete"
 fi
