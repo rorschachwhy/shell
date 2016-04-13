@@ -1,0 +1,38 @@
+#!/bin/sh
+
+if [ $# != 1 ] ; then
+        echo "Usage: mysqlbk_recover mysql_2015_06_01.tar"
+        exit 1;
+fi
+
+read -p "Are you sure to recover from $1? [Y/n] " response
+
+case $response in [Y])
+
+        if [[ "$1" =~ ".tar" ]];then
+                path="/home/"
+                cd $path
+
+                if [ -f "$1" ];then
+                        service mysqld stop
+                        rm -rf mysql_bk
+                        mv mysql mysql_bk
+                        tar xf $1
+
+                        getenforce
+                        semanage fcontext -a -t mysqld_db_t "/home/mysql(/.*)?"
+                        restorecon -Rv /home/mysql
+
+                        service mysqld start
+                else
+                        echo "$1 does not exist, just exit!"
+                fi
+        else
+                echo "$1 is not tar, just exit!"
+        fi
+    ;;
+    *)
+    echo Canceled
+    ;;
+esac
+
