@@ -18,7 +18,7 @@ HOSTNAME=(
 
 PORT="3306"
 USERNAME="root"
-PASSWORD="p@swrd123"
+PASSWORD="XXXX"
 
 
 search1_sql="SELECT 

@@ -32,7 +32,7 @@ HOSTNAME=(
 
 PORT="3306"
 USERNAME="root"
-PASSWORD="p@swrd123"
+PASSWORD="XXXX"
 
 
 taobao1_sql="SELECT 

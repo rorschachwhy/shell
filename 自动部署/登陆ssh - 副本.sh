@@ -31,7 +31,7 @@ HOSTNAME11=(
 )
 
 user="shbj"
-password="shbj123"
+password="XXXX"
 #echo shbj123  | ssh shbj@58.68.148.61 
 
 #sshpass -p shbj123 ssh shbj@58.68.148.6

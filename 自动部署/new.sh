@@ -2,7 +2,7 @@
 #set timeout 30
 
 user="shbj"
-password="shbj123"
+password="XXXX"
 
 ip="58.68.148.52"
 proj="bpm"

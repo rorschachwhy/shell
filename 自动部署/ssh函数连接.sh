@@ -1,7 +1,7 @@
 #!/bin/sh
 
 user="shbj"
-password="shbj123"
+password="XXXX"
 
 ip="58.68.148.52"
 proj="delivery"

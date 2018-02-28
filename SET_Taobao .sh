@@ -33,7 +33,7 @@ HOSTNAME=(
 
 PORT="3306"
 USERNAME="root"
-PASSWORD="p@swrd123"
+PASSWORD="XXXX"
 echo "
 ===================================使用说明=============================
  1、首先请输入要配置的淘宝环境和新生成的session值
